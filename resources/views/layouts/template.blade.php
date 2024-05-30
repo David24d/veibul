@@ -86,7 +86,7 @@
                     
 
 
-
+        <!--Final de linea de tiempo-->
                 @yield('footer-content')
                <li class="timeline-inverted">
                         <div class="timeline-image">
