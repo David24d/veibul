@@ -4,7 +4,7 @@
 
 @section('content') 
 @foreach ($tblServicios as $tblServicio)                                                                           
-                                <!-- Services-->
+                                <!-- Servicios-->
                                 
                                 <div class="col-md-4">
                         <span class="fa-stack fa-4x">

@@ -7,26 +7,29 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Ejecutar las migraciones.
      */
     public function up(): void
     {
-
+         // Crear la tabla 'tblentradas'
         Schema::create('tblentradas', function (Blueprint $table) {
+            // Definir la columna 'id' como llave primaria con auto-incremento
             $table->bigIncrements('id');
             
+             // Definir las columnas  como string
             $table->string('fecha');
             $table->string('titulo');
             $table->string('descripcion');
             $table->string('imagen');
-
+             
+            // Crear columnas de timestamps ('created_at' y 'updated_at')
             $table->timestamps();
         });
         //
     }
 
     /**
-     * Reverse the migrations.
+     * Revertir las migraciones.
      */
     public function down(): void
     {
