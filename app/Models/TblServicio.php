@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class TblServicio
+ * Clase TblServicio
  *
  * @property $id
  * @property $icono
@@ -19,17 +19,24 @@ use Illuminate\Database\Eloquent\Model;
  */
 class TblServicio extends Model
 {
-    
+        /**
+     * Reglas de validación para los atributos del modelo
+     */
+
     static $rules = [
 		'icono' => 'required|string',
 		'titulo' => 'required|string',
 		'descripcion' => 'required|string',
     ];
+     
+        /**
+     * Número de elementos por página al paginar
+     */
 
     protected $perPage = 20;
 
     /**
-     * Attributes that should be mass-assignable.
+     * Atributos que se pueden asignar en masa
      *
      * @var array
      */

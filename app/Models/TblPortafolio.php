@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class TblPortafolio
+ * Clase TblPortafolio
  *
  * @property $id
  * @property $titulo
@@ -23,8 +23,15 @@ use Illuminate\Database\Eloquent\Model;
  */
 class TblPortafolio extends Model
 {
+
+      /**
+     * Nombre de la tabla asociada al modelo.
+     */
   protected $table = 'tbl-portafolios';
 
+      /**
+     * Reglas de validación para los atributos del modelo.
+     */
     static $rules = [
 		'titulo' => 'required|string',
 		'subtitulo' => 'required|string',
@@ -35,10 +42,13 @@ class TblPortafolio extends Model
 		'url' => 'required|string',
     ];
 
+    /**
+     * Número de elementos por página al paginar.
+     */
     protected $perPage = 20;
 
     /**
-     * Attributes that should be mass-assignable.
+     * Atributos que se pueden asignar en masa.
      *
      * @var array
      */

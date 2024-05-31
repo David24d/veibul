@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Tblequipo
+ * Clase Tblequipo
  *
  * @property $id
  * @property $imagen
@@ -21,8 +21,15 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Tblequipo extends Model
 {
+      /**
+     * Nombre de la tabla asociada al modelo.
+     */ 
+
   protected $table = 'tblequipo';
     
+      /**
+     * Reglas de validación para los atributos del modelo.
+     */
     static $rules = [
 		'imagen' => 'required|string',
 		'nombrecompleto' => 'required|string',
@@ -31,10 +38,13 @@ class Tblequipo extends Model
 		'facebook' => 'required|string',
     ];
 
+        /**
+     * Número de elementos por página al paginar.
+     */
     protected $perPage = 20;
 
     /**
-     * Attributes that should be mass-assignable.
+     * Atributos que se pueden asignar en masa.
      *
      * @var array
      */
