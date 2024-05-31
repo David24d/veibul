@@ -6,13 +6,13 @@ use App\Models\TblServicio;
 use Illuminate\Http\Request;
 
 /**
- * Class TblServicioController
+ * Clase TblServicioController
  * @package App\Http\Controllers
  */
 class TblServicioController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Crea una nueva instancia del controlador.
      *
      * @return \Illuminate\Http\Response
      */
@@ -22,6 +22,10 @@ class TblServicioController extends Controller
          $this->middleware('auth');
      }
  
+    /**
+     * Muestra una lista de los recursos.
+     *
+     */
     public function index()
     {
         $tblServicios = TblServicio::paginate();
@@ -31,7 +35,7 @@ class TblServicioController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el formulario para crear un nuevo recurso.
      *
      * @return \Illuminate\Http\Response
      */
@@ -42,7 +46,7 @@ class TblServicioController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Almacena un recurso recién creado en el almacenamiento.
      *
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
@@ -58,7 +62,7 @@ class TblServicioController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Muestra el recurso especificado.
      *
      * @param  int $id
      * @return \Illuminate\Http\Response
@@ -71,7 +75,7 @@ class TblServicioController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra el formulario para editar el recurso especificado.
      *
      * @param  int $id
      * @return \Illuminate\Http\Response
@@ -84,7 +88,7 @@ class TblServicioController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza el recurso especificado en el almacenamiento.
      *
      * @param  \Illuminate\Http\Request $request
      * @param  TblServicio $tblServicio
@@ -101,6 +105,8 @@ class TblServicioController extends Controller
     }
 
     /**
+     * Elimina el recurso especificado del almacenamiento.
+     *
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
