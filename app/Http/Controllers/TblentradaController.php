@@ -58,7 +58,7 @@ class TblentradaController extends Controller
         $tblentrada = Tblentrada::create($request->all());
 
         return redirect()->route('tblentradas.index')
-            ->with('success', 'Tblentrada created successfully.');
+            ->with('success', 'Historia Creada.');
     }
 
     /**
@@ -101,7 +101,7 @@ class TblentradaController extends Controller
         $tblentrada->update($request->all());
 
         return redirect()->route('tblentradas.index')
-            ->with('success', 'Tblentrada updated successfully');
+            ->with('success', 'Historia Actualizada');
     }
 
     /**
@@ -116,6 +116,6 @@ class TblentradaController extends Controller
         $tblentrada = Tblentrada::find($id)->delete();
 
         return redirect()->route('tblentradas.index')
-            ->with('success', 'Tblentrada deleted successfully');
+            ->with('success', 'Historia Eliminada');
     }
 }

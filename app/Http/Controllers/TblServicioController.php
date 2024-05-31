@@ -58,7 +58,7 @@ class TblServicioController extends Controller
         $tblServicio = TblServicio::create($request->all());
 
         return redirect()->route('tbl-servicios.index')
-            ->with('success', 'TblServicio created successfully.');
+            ->with('success', 'Nuevo Servicio Creado.');
     }
 
     /**
@@ -101,7 +101,7 @@ class TblServicioController extends Controller
         $tblServicio->update($request->all());
 
         return redirect()->route('tbl-servicios.index')
-            ->with('success', 'TblServicio updated successfully');
+            ->with('success', 'Servicio Actalizado');
     }
 
     /**
@@ -116,6 +116,6 @@ class TblServicioController extends Controller
         $tblServicio = TblServicio::find($id)->delete();
 
         return redirect()->route('tbl-servicios.index')
-            ->with('success', 'TblServicio deleted successfully');
+            ->with('success', 'Servicio Eliminado');
     }
 }

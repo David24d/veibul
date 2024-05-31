@@ -59,7 +59,7 @@ class TblequipoController extends Controller
         $tblequipo = Tblequipo::create($request->all());
 
         return redirect()->route('tblequipo.index')
-            ->with('success', 'Tblequipo created successfully.');
+            ->with('success', 'Diseñador Creado.');
     }
 
     /**
@@ -102,7 +102,7 @@ class TblequipoController extends Controller
         $tblequipo->update($request->all());
 
         return redirect()->route('tblequipo.index')
-            ->with('success', 'Tblequipo updated successfully');
+            ->with('success', 'Diseñador Actualizado');
     }
 
     /**
@@ -117,6 +117,6 @@ class TblequipoController extends Controller
         $tblequipo = Tblequipo::find($id)->delete();
 
         return redirect()->route('tblequipo.index')
-            ->with('success', 'Tblequipo deleted successfully');
+            ->with('success', 'Diseñador Eliminado');
     }
 }

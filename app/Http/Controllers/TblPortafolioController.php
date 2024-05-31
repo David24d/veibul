@@ -58,7 +58,7 @@ class TblPortafolioController extends Controller
         $tblPortafolio = TblPortafolio::create($request->all());
 
         return redirect()->route('tbl-portafolios.index')
-            ->with('success', 'TblPortafolio created successfully.');
+            ->with('success', 'Pagina Web Creada.');
     }
 
     /**
@@ -101,7 +101,7 @@ class TblPortafolioController extends Controller
         $tblPortafolio->update($request->all());
 
         return redirect()->route('tbl-portafolios.index')
-            ->with('success', 'TblPortafolio updated successfully');
+            ->with('success', 'Pagina Web Actualizada');
     }
 
     /**
@@ -116,6 +116,6 @@ class TblPortafolioController extends Controller
         $tblPortafolio = TblPortafolio::find($id)->delete();
 
         return redirect()->route('tbl-portafolios.index')
-            ->with('success', 'TblPortafolio deleted successfully');
+            ->with('success', 'Pagina Web Eliminada');
     }
 }
