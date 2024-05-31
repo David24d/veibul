@@ -17,6 +17,10 @@ class TblPortafolioController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+       /**
+     * Sistema de autenticacion
+     */
+
      public function __construct()
      {
          $this->middleware('auth');
